@@ -1,0 +1,28 @@
+{
+  "name": "joeleeson",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx mix",
+    "watch": "npx mix watch",
+    "production": "npx mix --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaleeson11/joeleeson.git"
+  },
+  "author": "Joe Leeson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaleeson11/joeleeson/issues"
+  },
+  "homepage": "https://github.com/jaleeson11/joeleeson#readme",
+  "devDependencies": {
+    "bootstrap": "^5.1.3",
+    "laravel-mix": "^6.0.43",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.49.11",
+    "sass-loader": "^12.1.0"
+  }
+}
