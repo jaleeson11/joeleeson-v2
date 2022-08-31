@@ -4,12 +4,261 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Joe Leeson - Web Developer</title>
+	<meta name="description" contente="A Web Developer passionate about creating stylish frontend web solutions with a great user experience.">
+	<title>Joe Leeson | Web Developer</title>
 	<link rel="stylesheet" href="dist/style.css">
+	<link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 <body>
-	<div class="container">
-		<h1>My Portfolio</h1>
-	</div>
+	<header>
+		<nav class="navbar container">
+			<div class="navbar__logo">
+				<img src="assets/images/logo.png" alt="Logo">
+			</div>
+			<ul class="navbar__nav" id="navbarNav">
+				<li class="nav-item">
+					<a href="#about-me" class="nav-link">
+						Me
+					</a>
+				</li>
+				<li class="nav-item skills">
+					<a href="#skills" class="nav-link">
+						Skills
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#projects" class="nav-link">
+						Work
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#contact" class="nav-link">
+						Contact
+					</a>
+				</li>
+			</ul>
+			<button class="navbar__toggle" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<button class="btn-scroll-top">
+				<img src="assets/images/double-arrow-top.svg" alt="Double Arrow Top">
+			</button>
+		</nav>
+	</header>
+	<main>
+		<div class="container">
+			<section id="hero">
+				<div class="hero__image">
+					<img src="assets/images/profile-photo.png" alt="Profile Photo">
+				</div>
+				<div class="hero__content">
+					<h1>Hi, I'm Joe,<br><mark>Web Developer</mark></h1>
+					<p>I'm passionate about creating stylish frontend web solutions with a great user experience.</p>
+					<ul class="hero__social">
+						<li>
+							<a href="https://github.com/jaleeson11" target="_blank">
+								<span class="icon">
+									<img src="assets/images/github.svg" alt="GitHub">
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/joe-leeson-1328411b2/" target="_blank">
+								<span class="icon">
+									<img src="assets/images/linkedin.svg" alt="LinkedIn">
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section id="about-me">
+				<div class="heading">
+					<small>here's a little bit</small>
+					<h2>About Me</h2>
+				</div>
+				<div class="section-container">
+					<div class="about-me__content">
+						<p>I've been working in industry as a <span class="about-me__flag">Junior Web Developer</span> for a few years now, and before that I was studying Computer Science at the <span class="about-me__flag">University of Brighton</span> where I graduated in 2020! Object oriented programming, relational database structures, and project management are some of the key areas I was educated in.</p>
+						<p>Before my studies, I spent a lot of time creating static pages with HTML and CSS, and In hindsight, this is where my web developer journey really started as I began to develop a passion for <span class="about-me__flag">UI/UX design</span>.</p>
+						<p>As for the future, what excites me most about web development is having the ability to <span class="about-me__flag">bring innovative concepts to life that can create a positive user experience</span>, and as a web developer still learning their craft, this is ultimately how I see myself utilising my skills.</p>
+					</div>
+				</div>
+			</section>
+			<section id="skills">
+				<div class="heading">
+					<small>here are some of my</small>
+					<h2>Skills</h2>
+				</div>
+				<div class="section-container section-container--skills">
+					<ul class="skills__list">
+						<li class="skill-item">
+							<img src="assets/images/html5.svg" alt="HTML5">
+							<span>HTML</span>
+						</li>
+						<li class="skill-item">
+							<img src="assets/images/css3-alt.svg" alt="CSS3">
+							<span>CSS</span>
+						</li>
+						<li class="skill-item">
+							<img src="assets/images/js-square.svg" alt="JavaScript">
+							<span>JavaScript</span>
+						</li>
+						<li class="skill-item">
+							<img src="assets/images/php.svg" alt="PHP">
+							<span>PHP</span>
+						</li>
+						<li class="skill-item">
+							<img src="assets/images/jquery.svg" alt="jQuery">
+							<span>jQuery</span>
+						</li>
+						<li class="skill-item">
+							<img src="assets/images/sass.svg" alt="SASS">
+							<span>SASS</span>
+						</li>
+						<li class="skill-item">
+							<img src="assets/images/vuejs.svg" alt="Vue.js">
+							<span>Vue.js</span>
+						</li>
+						<li class="skill-item">
+							<img src="assets/images/magento.svg" alt="Magento">
+							<span>Magento</span>
+						</li>
+						<li class="skill-item">
+							<img src="assets/images/wordpress.svg" alt="WordPress">
+							<span>WordPress</span>
+						</li>
+						<li class="skill-item">
+							<img src="assets/images/laravel.svg" alt="Laravel">
+							<span>Laravel</span>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section id="projects">
+				<div class="heading">
+					<small>check out some of my</small>
+					<h2>Latest Projects</h2>
+				</div>
+				<div class="section-container section-container--project">
+					<article class="project">
+						<div class="project__thumb">
+							<img src="assets/images/elliemoatt-thumb.png" alt="Ellie Moatt Thumbnail">
+						</div>
+						<div class="project__content">
+							<div class="project__header">
+								<div class="project__title">
+									<h3>Ellie M Therapy</h3>
+								</div>
+								<ul class="project__tags">
+									<li>WordPress</li>
+									<li>CSS</li>
+									<li>PHP</li>
+								</ul>
+							</div>
+							<div class="project__description">
+								<p>Ellie M Therapy is a custom WordPress theme built for a freelance client that specialises in child therapy. The goal for this project was to create a theme that communicated the clients expertise and services through a calming and friendly UI.</p>
+							</div>
+							<ul class="project__links">
+								<li><a href="https://elliemoattherapy.co.uk/" target="_blank">Live</a></li>
+								<li><a href="https://github.com/jaleeson11/elliemoatt" target="_blank">Repo</a></li>
+							</ul>
+						</div>
+					</article>
+				</div>
+				<div class="section-container section-container--project">
+					<article class="project">
+						<div class="project__thumb">
+							<img src="assets/images/myndjournal-thumb.png" alt="Mynd Journal Thumbnail">
+						</div>
+						<div class="project__content">
+							<div class="project__header">
+								<div class="project__title">
+									<h3>Mynd Journal</h3>
+								</div>
+								<ul class="project__tags">
+									<li>Laravel</li>
+									<li>PHP</li>
+									<li>Vue.js</li>
+								</ul>
+							</div>
+							<div class="project__description">
+								<p>Based on cognitive-behavioural therapy (CBT), Mynd Journal is a two-part journalling application designed to help the user identify negative thinking patterns and develop a more balanced perspective.</p>
+							</div>
+							<ul class="project__links">
+								<li><a href="https://github.com/jaleeson11/myndjournal" target="_blank">Repo</a></li>
+							</ul>
+						</div>
+					</article>
+				</div>
+				<div class="section-container section-container--project">
+					<article class="project">
+						<div class="project__thumb">
+							<img src="assets/images/eirerepublic-thumb.png" alt="EireRepublic Thumbnail">
+						</div>
+						<div class="project__content">
+							<div class="project__header">
+								<div class="project__title">
+									<h3>EireRepublic</h3>
+								</div>
+								<ul class="project__tags">
+									<li>WordPress</li>
+									<li>CSS</li>
+									<li>PHP</li>
+								</ul>
+							</div>
+							<div class="project__description">
+								<p>EireRepublic is a custom WordPress theme built for an all-Irish themed blog. This project involved restructuring how WordPress was built into the site to make it easier to manage from the admin panel, as well as redesigning the user interface.</p>
+							</div>
+							<ul class="project__links">
+								<li><a href="https://github.com/jaleeson11/eirerepublic" target="_blank">Repo</a></li>
+							</ul>
+						</div>
+					</article>
+				</div>
+			</section>
+			<section id="contact">
+				<div class="heading">
+					<small>feel free to</small>
+					<h2>Get In Touch</h2>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="section-container section-container--contact">
+							<div class="contact__email">
+								<a href="mailto: jaleeson11@gmail.com">
+									<i class="icon icon--dark">
+										<img src="assets/images/envelope.svg" alt="Email">
+									</i>
+									<p>jaleeson11@gmail.com</p>
+									<small>email me</small>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="section-container section-container--contact">
+							<div class="contact__social">
+								<a href="https://www.linkedin.com/in/joe-leeson-1328411b2/" target="_blank">
+									<span class="icon icon--dark">
+										<img src="assets/images/linkedin-blue.svg" alt="LinkedIn">
+									</span>
+									<p>Joe Leeson</p>
+									<small>look me up</small>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<footer>
+		<span>&copy; Joe Leeson 2022</span>
+	</footer>
+
+	<script src="dist/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,15 @@
+a {
+	color: $color__lime-green;
+	display: inline-block;
+	text-decoration: none;
+
+	&:visited {
+		color: $color__lime-green;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__lime-green;
+	}
+}

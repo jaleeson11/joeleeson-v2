@@ -1,0 +1,141 @@
+header {
+	position: fixed;
+	width: 100%;
+	background-color: $color__dark-navy;
+	transition: transform 0.2s;
+	padding: 15px 0;
+
+	&.headroom--pinned {
+		transform: translateY(0);
+	}
+
+	&.headroom--unpinned {
+		transform: translateY(-100%);
+	}
+
+	.navbar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	
+		.navbar__nav {
+			display: flex;
+			text-align: center;
+			flex-basis: 50%;
+			flex-wrap: wrap;
+		
+			.nav-item {
+				flex-grow: 1;
+	
+				.nav-link {
+					color: $color__light-blue;
+					text-transform: uppercase;
+					font-weight: 500;
+					transition: color 0.5s;
+	
+					&:hover {
+						color: $color__lime-green;
+					}
+				}
+	
+				&.active {
+					.nav-link {
+						color: $color__lime-green;
+					}
+				}
+			}
+		}
+	
+		.navbar__logo,
+		.navbar__social {
+			flex: 1 0 0;
+			align-items: center;
+		}
+	
+		.navbar__logo {
+			max-width: 55px;
+		}
+	
+		.navbar__toggle {
+			display: none;
+			transition: all 0.2s;
+			background: none;
+			border: none;
+			cursor: pointer;
+			z-index: 1;
+	
+			span {
+				display: block;
+				height: 3px;
+				width: 40px;
+				background-color: #fff;
+				border-radius: 5px;
+				margin: 10px;
+				transition: all .65s cubic-bezier(0.075, 0.82, 0.165, 1);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) { 
+	header {
+		position: static;
+		padding-bottom: 0;
+
+		.navbar {
+			.navbar__social {
+				display: none;
+			}
+
+			.navbar__toggle {
+				display: block;
+			}
+
+			.navbar__nav {
+				display: block;
+				position: absolute;
+				height: 100vh;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				z-index: 1;
+				background-color: #000;
+				opacity: 0.8;
+				transition: left 0.5s;
+				padding-top: 100px;
+	
+				&.open {
+					left: 0;
+	
+					+ .navbar__toggle {
+						transform: rotate(45deg) scale(.8);
+	
+						span {
+							// background-color: $color__dark-navy;
+	
+							&:first-child {
+								transform: translateY(13px) rotate(0deg);
+							}
+	
+							&:nth-child(2) {
+								opacity: 0;
+							}
+	
+							&:last-child {
+								transform: translateY(-13px) rotate(90deg);
+							}
+						}
+					}
+				}
+	
+				.nav-item {
+					padding-bottom: 30px;
+	
+					.nav-link {
+						font-size: 28px;
+					}
+				}
+			}
+		} 
+	}
+}
