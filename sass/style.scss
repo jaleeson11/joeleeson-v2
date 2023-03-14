@@ -8,10 +8,10 @@
 @import "generic/normalize";
 @import "generic/box-sizing";
 
-/* Variables
+/* Abstracts
 --------------------------------------------- */
-@import "variables/colours";
-@import "variables/typography";
+// Import variables and mixins.
+@import "abstracts/abstracts";
 
 /* Base
 --------------------------------------------- */

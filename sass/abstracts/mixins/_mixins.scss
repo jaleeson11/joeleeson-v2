@@ -1,0 +1,4 @@
+// Converts pixel font size to rem
+@mixin to_rem($value) {
+    font-size: calc(round(calc($value / 16) * 100) / 100) + rem;
+}
