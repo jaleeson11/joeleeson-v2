@@ -20,12 +20,9 @@ header {
 	
 		.navbar__nav {
 			display: flex;
-			text-align: center;
-			flex-basis: 40%;
-			flex-wrap: wrap;
 		
 			.nav-item {
-				flex-grow: 1;
+				padding: 0 25px;
 	
 				.nav-link {
 					color: $color__text-main;
@@ -94,6 +91,7 @@ header {
 				opacity: 0.8;
 				transition: left 0.5s;
 				padding-top: 100px;
+				text-align: center;
 	
 				&.open {
 					left: 0;
