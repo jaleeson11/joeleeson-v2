@@ -6265,14 +6265,14 @@ img {
 }
 
 section {
-  padding: 100px 0;
+  padding: 6.25rem 0;
 }
 section .heading h2 {
   margin-top: 1rem;
 }
 section .section-container {
   background-color: #fff;
-  padding: 40px;
+  padding: 2.5rem;
   border-radius: 5px;
   -webkit-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2);
@@ -6281,21 +6281,21 @@ section .section-container.section-container--skills {
   padding-bottom: 0;
 }
 section .section-container.section-container--project:not(:last-child), section .section-container.section-container--contact {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 @media screen and (max-width: 768px) {
   section {
-    padding: 60px 0;
+    padding: 3.75rem 0;
   }
   section .section-container {
-    padding: 20px;
+    padding: 1.25rem;
   }
   section .section-container.section-container--skills {
-    padding-top: 40px;
+    padding-top: 2.5rem;
   }
   section .section-container.section-container--project:not(:last-child), section .section-container.section-container--contact {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 }
 /* Links
