@@ -2,8 +2,20 @@
 
 $font__main: 'Raleway', sans-serif;
 
-$font-size__h1: 67.34;
-$font-size__h2: 50.52;
-$font-size__h3: 37.90;
-$font-size__h4: 28.43;
-$font-size__h5: 21.33;
+$font__size: 100%;
+$font__ratio: 1.2;
+$font__ratio-large: 1.333;
+
+$font__size-small: calc($font__size / $font__ratio);
+$font__size-h5: $font__size * $font__ratio;
+$font__size-h4: $font__size-h5 * $font__ratio;
+$font__size-h3: $font__size-h4 * $font__ratio;
+$font__size-h2: $font__size-h3 * $font__ratio;
+$font__size-h1: $font__size-h2 * $font__ratio;
+
+$font__size-small-large: calc($font__size / $font__ratio-large);
+$font__size-h5-large: $font__size * $font__ratio-large;
+$font__size-h4-large: $font__size-h5-large * $font__ratio-large;
+$font__size-h3-large: $font__size-h4-large * $font__ratio-large;
+$font__size-h2-large: $font__size-h3-large * $font__ratio-large;
+$font__size-h1-large: $font__size-h2-large * $font__ratio-large;
