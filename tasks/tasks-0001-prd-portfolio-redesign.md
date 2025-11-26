@@ -69,8 +69,8 @@
   - [x] 1.4 Install and configure Prettier for code formatting
   - [x] 1.5 Configure astro.config.mjs for static site generation and image optimization
   - [x] 1.6 Create initial project structure: `src/components/`, `src/styles/`, `src/data/`, `src/layouts/`
-  - [ ] 1.7 Set up Git repository and create initial commit
-  - [ ] 1.8 Create README.md with project overview and setup instructions
+  - [x] 1.7 Set up Git repository and create initial commit
+  - [x] 1.8 Create README.md with project overview and setup instructions
 
 - [ ] 2.0 Design System & Global Styles
   - [ ] 2.1 Create `src/styles/variables.scss` with spacing scale (4, 8, 16, 24, 32, 48, 64px), breakpoints, and color palette
