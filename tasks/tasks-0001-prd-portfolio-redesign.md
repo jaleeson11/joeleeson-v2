@@ -62,7 +62,7 @@
 
 ## Tasks
 
-- [ ] 1.0 Project Setup & Configuration
+- [x] 1.0 Project Setup & Configuration
   - [x] 1.1 Initialize Astro project with `npm create astro@latest` using minimal template
   - [x] 1.2 Install and configure SCSS support (`npm install sass`)
   - [x] 1.3 Set up TypeScript configuration (tsconfig.json should be auto-generated)
@@ -73,14 +73,14 @@
   - [x] 1.8 Create README.md with project overview and setup instructions
 
 - [ ] 2.0 Design System & Global Styles
-  - [ ] 2.1 Create `src/styles/variables.scss` with spacing scale (4, 8, 16, 24, 32, 48, 64px), breakpoints, and color palette
-  - [ ] 2.2 Define typography variables (font family, sizes, weights, line-heights) in variables.scss
-  - [ ] 2.3 Create `src/styles/global.scss` with CSS reset (or use modern-normalize)
-  - [ ] 2.4 Implement base typography styles (h1-h3, body text, links) in global.scss
-  - [ ] 2.5 Set up consistent spacing utilities and vertical rhythm in global.scss
-  - [ ] 2.6 Define color palette inspired by brittanychiang.com (monochromatic with accent color)
-  - [ ] 2.7 Implement smooth scroll behavior and focus-visible styles
-  - [ ] 2.8 Add `prefers-reduced-motion` media query support for animations
+  - [x] 2.1 Create `src/styles/variables.scss` with spacing scale (4, 8, 16, 24, 32, 48, 64px), breakpoints, and color palette
+  - [x] 2.2 Define typography variables (font family, sizes, weights, line-heights) in variables.scss
+  - [x] 2.3 Create `src/styles/global.scss` with CSS reset (or use modern-normalize)
+  - [x] 2.4 Implement base typography styles (h1-h3, body text, links) in global.scss
+  - [x] 2.5 Set up consistent spacing utilities and vertical rhythm in global.scss
+  - [x] 2.6 Define color palette inspired by brittanychiang.com (monochromatic with accent color)
+  - [x] 2.7 Implement smooth scroll behavior and focus-visible styles
+  - [x] 2.8 Add `prefers-reduced-motion` media query support for animations
 
 - [ ] 3.0 Core Layout & Component Structure
   - [ ] 3.1 Create `src/layouts/Layout.astro` with HTML structure, head tags, and global style imports
