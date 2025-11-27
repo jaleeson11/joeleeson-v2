@@ -1,0 +1,42 @@
+---
+import styles from './ProjectCard.module.scss';
+
+interface Props {
+  title: string;
+  description: string;
+  techStack: string[];
+  image?: string;
+  link?: string;
+}
+
+const { title, description, techStack, image, link } = Astro.props;
+---
+
+<article class={styles.card}>
+  {
+    image && (
+      <div class={styles.imageWrapper}>
+        <img src={image} alt={title} class={styles.image} />
+      </div>
+    )
+  }
+  <div class={styles.content}>
+    <h3 class={styles.title}>{title}</h3>
+    <p class={styles.description}>{description}</p>
+    <ul class={styles.techStack}>
+      {techStack.map((tech) => <li class={styles.tech}>{tech}</li>)}
+    </ul>
+    {
+      link && (
+        <a
+          href={link}
+          class={styles.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Project →
+        </a>
+      )
+    }
+  </div>
+</article>

@@ -1,0 +1,30 @@
+.projects {
+  padding: var(--spacing-3xl) 0;
+}
+
+.heading {
+  margin-bottom: var(--spacing-xl);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .projects {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}

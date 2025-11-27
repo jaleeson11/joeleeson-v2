@@ -72,7 +72,7 @@
   - [x] 1.7 Set up Git repository and create initial commit
   - [x] 1.8 Create README.md with project overview and setup instructions
 
-- [ ] 2.0 Design System & Global Styles
+- [x] 2.0 Design System & Global Styles
   - [x] 2.1 Create `src/styles/variables.scss` with spacing scale (4, 8, 16, 24, 32, 48, 64px), breakpoints, and color palette
   - [x] 2.2 Define typography variables (font family, sizes, weights, line-heights) in variables.scss
   - [x] 2.3 Create `src/styles/global.scss` with CSS reset (or use modern-normalize)
@@ -83,18 +83,18 @@
   - [x] 2.8 Add `prefers-reduced-motion` media query support for animations
 
 - [ ] 3.0 Core Layout & Component Structure
-  - [ ] 3.1 Create `src/layouts/Layout.astro` with HTML structure, head tags, and global style imports
-  - [ ] 3.2 Build `src/components/Hero.astro` with name, title, and tagline
-  - [ ] 3.3 Create Hero.module.scss with typography hierarchy and spacing
-  - [ ] 3.4 Build `src/components/About.astro` with placeholder content structure
-  - [ ] 3.5 Create About.module.scss with readable text width and line-height
-  - [ ] 3.6 Build `src/components/ProjectCard.astro` with props for title, description, tech stack, image, and link
-  - [ ] 3.7 Create ProjectCard.module.scss with hover states and transitions (200-300ms)
-  - [ ] 3.8 Build `src/components/Projects.astro` that maps over project data and renders ProjectCard components
-  - [ ] 3.9 Create Projects.module.scss with responsive grid layout (3-col desktop, 2-col tablet, 1-col mobile)
-  - [ ] 3.10 Build `src/components/Contact.astro` with social links (GitHub, LinkedIn, Email) and footer
-  - [ ] 3.11 Create Contact.module.scss with link styling and spacing
-  - [ ] 3.12 Assemble all components in `src/pages/index.astro` as single-page layout
+  - [x] 3.1 Create `src/layouts/Layout.astro` with HTML structure, head tags, and global style imports
+  - [x] 3.2 Build `src/components/Hero.astro` with name, title, and tagline
+  - [x] 3.3 Create Hero.module.scss with typography hierarchy and spacing
+  - [x] 3.4 Build `src/components/About.astro` with placeholder content structure
+  - [x] 3.5 Create About.module.scss with readable text width and line-height
+  - [x] 3.6 Build `src/components/ProjectCard.astro` with props for title, description, tech stack, image, and link
+  - [x] 3.7 Create ProjectCard.module.scss with hover states and transitions (200-300ms)
+  - [x] 3.8 Build `src/components/Projects.astro` that maps over project data and renders ProjectCard components
+  - [x] 3.9 Create Projects.module.scss with responsive grid layout (3-col desktop, 2-col tablet, 1-col mobile)
+  - [x] 3.10 Build `src/components/Contact.astro` with social links (GitHub, LinkedIn, Email) and footer
+  - [x] 3.11 Create Contact.module.scss with link styling and spacing
+  - [x] 3.12 Assemble all components in `src/pages/index.astro` as single-page layout
   - [ ] 3.13 (Optional) Create `src/components/Navigation.astro` with smooth anchor links to sections
 
 - [ ] 4.0 Content Migration & Data Preparation
