@@ -138,11 +138,14 @@
     background-color var(--transition-base);
 }
 
-.navLink:hover {
+.navLink:hover,
+.navLink:global(.active) {
   color: var(--color-text);
+  text-decoration: none;
 }
 
-.navLink:hover::before {
+.navLink:hover::before,
+.navLink:global(.active)::before {
   width: 64px;
   background-color: var(--color-text);
 }
