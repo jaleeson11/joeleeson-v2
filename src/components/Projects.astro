@@ -30,20 +30,19 @@ const projects = [
 ---
 
 <section class={styles.projects} id="projects">
-  <div class="container">
-    <h2 class={styles.heading}>Featured Projects</h2>
-    <div class={styles.grid}>
-      {
-        projects.map((project) => (
-          <ProjectCard
-            title={project.title}
-            description={project.description}
-            techStack={project.techStack}
-            image={project.image}
-            link={project.link}
-          />
-        ))
-      }
-    </div>
+  <p class="section-overline">Things I've built</p>
+  <h2 class={styles.heading}>Featured Projects</h2>
+  <div class={styles.grid}>
+    {
+      projects.map((project) => (
+        <ProjectCard
+          title={project.title}
+          description={project.description}
+          techStack={project.techStack}
+          image={project.image}
+          link={project.link}
+        />
+      ))
+    }
   </div>
 </section>

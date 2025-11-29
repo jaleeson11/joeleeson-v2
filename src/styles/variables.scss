@@ -1,20 +1,18 @@
 :root {
-  /* Color Palette - Monochromatic with accent */
-  --color-primary: #0a0a0a;
-  --color-secondary: #1a1a1a;
-  --color-accent: #3b82f6;
-  --color-background: #ffffff;
-  --color-text: #1a1a1a;
-  --color-text-secondary: #5a5a5a;
-  --color-border: #e0e0e0;
+  /* Color Palette - Dark mode with accent */
+  --color-primary: #31ea99;
+  --color-secondary: #a1a1aa;
+  --color-accent: #60a5fa;
+  --color-background: #1a202c;
+  --color-text: #f0fcff;
+  --color-text-secondary: #a1a1aa;
+  --color-border: #27272a;
 
   /* Font Families */
-  --font-family-heading:
-    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-heading: 'Space Mono', 'Courier New', monospace;
   --font-family-body:
-    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-family-logo:
-    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-logo: 'Space Mono', 'Courier New', monospace;
 
   /* Typography Base Variables */
   --font-size-base: 18px;

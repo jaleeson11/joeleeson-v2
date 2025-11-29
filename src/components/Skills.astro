@@ -1,0 +1,32 @@
+---
+import styles from './Skills.module.scss';
+import { Icon } from 'astro-icon/components';
+
+const skills = [
+  { name: 'HTML', icon: 'simple-icons:html5' },
+  { name: 'CSS', icon: 'simple-icons:css3' },
+  { name: 'JavaScript', icon: 'simple-icons:javascript' },
+  { name: 'PHP', icon: 'simple-icons:php' },
+  { name: 'jQuery', icon: 'simple-icons:jquery' },
+  { name: 'SASS', icon: 'simple-icons:sass' },
+  { name: 'Vue.js', icon: 'simple-icons:vuedotjs' },
+  { name: 'Magento', icon: 'simple-icons:magento' },
+  { name: 'WordPress', icon: 'simple-icons:wordpress' },
+  { name: 'Laravel', icon: 'simple-icons:laravel' },
+];
+---
+
+<section class={styles.skills} id="skills">
+  <p class="section-overline">Here are some of my</p>
+  <h2 class={styles.heading}>Skills</h2>
+  <div class={styles.grid}>
+    {
+      skills.map((skill) => (
+        <div class={styles.skill}>
+          <Icon name={skill.icon} class={styles.icon} />
+          <span class={styles.name}>{skill.name}</span>
+        </div>
+      ))
+    }
+  </div>
+</section>

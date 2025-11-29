@@ -2,13 +2,104 @@
 import styles from './Hero.module.scss';
 ---
 
-<section class={styles.hero}>
-  <div class="container">
-    <h1 class={styles.name}>Joe Leeson</h1>
-    <p class={styles.title}>Web Developer</p>
-    <p class={styles.tagline}>
-      Building modern, performant web applications with a focus on clean code
-      and exceptional user experiences.
-    </p>
+<aside class={styles.sidebar}>
+  <div class={styles.sidebarContent}>
+    <div class={styles.header}>
+      <h1 class={styles.name} id="typed-name"></h1>
+      <p class={styles.title} id="hero-title">Web Developer</p>
+      <p class={styles.tagline} id="hero-tagline">
+        Building modern, performant web applications with a focus on clean code
+        and exceptional user experiences.
+      </p>
+    </div>
+
+    <nav class={styles.nav} id="hero-nav">
+      <ul class={styles.navList}>
+        <li>
+          <a href="#about" class={styles.navLink}>About</a>
+        </li>
+        <li>
+          <a href="#projects" class={styles.navLink}>Projects</a>
+        </li>
+        <li>
+          <a href="#contact" class={styles.navLink}>Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class={styles.social} id="hero-social">
+      <a
+        href="https://github.com/jaleeson11"
+        target="_blank"
+        rel="noopener noreferrer"
+        class={styles.socialLink}
+        aria-label="GitHub"
+      >
+        GitHub
+      </a>
+      <a
+        href="https://linkedin.com/in/joeleeson"
+        target="_blank"
+        rel="noopener noreferrer"
+        class={styles.socialLink}
+        aria-label="LinkedIn"
+      >
+        LinkedIn
+      </a>
+      <a href="mailto:contact@joeleeson.com" class={styles.socialLink}>
+        Email
+      </a>
+    </div>
   </div>
-</section>
+</aside>
+
+<script>
+  const nameElement = document.getElementById('typed-name');
+  const titleElement = document.getElementById('hero-title');
+  const taglineElement = document.getElementById('hero-tagline');
+  const navElement = document.getElementById('hero-nav');
+  const socialElement = document.getElementById('hero-social');
+  const fullName = 'Joe Leeson';
+  let currentIndex = 0;
+
+  if (nameElement) {
+    nameElement.textContent = '';
+
+    function typeNextCharacter() {
+      if (currentIndex < fullName.length) {
+        nameElement.textContent += fullName[currentIndex];
+        currentIndex++;
+        setTimeout(typeNextCharacter, 100);
+      } else {
+        // Remove cursor instantly and start revealing elements
+        nameElement.setAttribute('data-typing', 'complete');
+        revealElements();
+      }
+    }
+
+    function revealElements() {
+      // Reveal title after 200ms
+      setTimeout(() => {
+        if (titleElement) titleElement.setAttribute('data-reveal', 'true');
+      }, 200);
+
+      // Reveal tagline after 400ms
+      setTimeout(() => {
+        if (taglineElement) taglineElement.setAttribute('data-reveal', 'true');
+      }, 400);
+
+      // Reveal nav after 600ms
+      setTimeout(() => {
+        if (navElement) navElement.setAttribute('data-reveal', 'true');
+      }, 600);
+
+      // Reveal social after 800ms
+      setTimeout(() => {
+        if (socialElement) socialElement.setAttribute('data-reveal', 'true');
+      }, 800);
+    }
+
+    // Start typing after a short delay
+    setTimeout(typeNextCharacter, 300);
+  }
+</script>

@@ -14,6 +14,19 @@ const { title, description, techStack, image, link } = Astro.props;
 
 <article class={styles.card}>
   {
+    link && (
+      <a
+        href={link}
+        class={styles.externalLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View project"
+      >
+        ↗
+      </a>
+    )
+  }
+  {
     image && (
       <div class={styles.imageWrapper}>
         <img src={image} alt={title} class={styles.image} />
@@ -26,17 +39,5 @@ const { title, description, techStack, image, link } = Astro.props;
     <ul class={styles.techStack}>
       {techStack.map((tech) => <li class={styles.tech}>{tech}</li>)}
     </ul>
-    {
-      link && (
-        <a
-          href={link}
-          class={styles.link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Project →
-        </a>
-      )
-    }
   </div>
 </article>
