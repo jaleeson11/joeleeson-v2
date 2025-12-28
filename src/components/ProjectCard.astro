@@ -1,5 +1,6 @@
 ---
 import styles from './ProjectCard.module.scss';
+import { Icon } from 'astro-icon/components';
 
 interface Props {
   title: string;
@@ -7,25 +8,13 @@ interface Props {
   techStack: string[];
   image?: string;
   link?: string;
+  status?: string;
 }
 
-const { title, description, techStack, image, link } = Astro.props;
+const { title, description, techStack, image, link, status } = Astro.props;
 ---
 
 <article class={styles.card}>
-  {
-    link && (
-      <a
-        href={link}
-        class={styles.externalLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="View project"
-      >
-        ↗
-      </a>
-    )
-  }
   {
     image && (
       <div class={styles.imageWrapper}>
@@ -34,7 +23,26 @@ const { title, description, techStack, image, link } = Astro.props;
     )
   }
   <div class={styles.content}>
-    <h3 class={styles.title}>{title}</h3>
+    <div class={styles.titleRow}>
+      <h3 class={styles.title}>{title}</h3>
+      {
+        link ? (
+          <a
+            href={link}
+            class={styles.externalLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View project"
+          >
+            <Icon name="lucide:external-link" />
+          </a>
+        ) : status ? (
+          <div class={styles.statusIcon} aria-label="In development">
+            <Icon name="lucide:hammer" />
+          </div>
+        ) : null
+      }
+    </div>
     <p class={styles.description}>{description}</p>
     <ul class={styles.techStack}>
       {techStack.map((tech) => <li class={styles.tech}>{tech}</li>)}

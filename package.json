@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "@fontsource/dm-sans": "^5.2.8",
+    "@fontsource/ibm-plex-sans": "^5.2.8",
     "@fontsource/space-mono": "^5.2.9",
+    "@iconify-json/lucide": "^1.2.77",
     "@iconify-json/simple-icons": "^1.2.60",
     "astro": "^5.16.1",
     "astro-icon": "^1.1.5",

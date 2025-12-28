@@ -5,26 +5,35 @@ import ProjectCard from './ProjectCard.astro';
 // Placeholder data - will be replaced with actual data from src/data/projects.ts
 const projects = [
   {
-    title: 'CutMy Product Visualiser',
+    title: 'Themeify',
     description:
-      'Interactive product visualisation tool for custom materials and configurations.',
-    techStack: ['WordPress', 'PHP', 'JavaScript', 'CSS'],
-    image: '/images/projects/cutmy-placeholder.jpg',
-    link: 'https://example.com',
+      'Design system playground for experimenting with design tokens including spacing, typography, colour schemes, and more.',
+    techStack: ['React', 'TypeScript', 'Tailwind CSS'],
+    image: '/images/projects/themeify.png',
+    status: 'in-development',
   },
   {
-    title: 'Project Two',
-    description: 'Placeholder for second project from existing portfolio.',
-    techStack: ['React', 'TypeScript', 'Node.js'],
-    image: '/images/projects/project-placeholder.jpg',
-    link: 'https://example.com',
+    title: 'Tech Radars',
+    description:
+      'Interactive technology radar application for visualising and tracking technology adoption and trends across teams.',
+    techStack: ['Next.js', 'TypeScript', 'React'],
+    image: '/images/projects/techradars.png',
+    link: 'https://techradars.app',
   },
   {
-    title: 'Project Three',
-    description: 'Placeholder for third project from existing portfolio.',
-    techStack: ['Magento', 'PHP', 'MySQL'],
-    image: '/images/projects/project-placeholder.jpg',
-    link: 'https://example.com',
+    title: 'BGF Demolition',
+    description:
+      'Professional demolition services website showcasing company expertise, services, and product catalogue.',
+    techStack: ['Next.js', 'TypeScript', 'React'],
+    image: '/images/projects/bgf-demolition.png',
+    link: 'https://bgfdemolition.co.uk',
+  },
+  {
+    title: 'Sarah Brown EMDR',
+    description: 'Bespoke WordPress theme for a professional psychotherapist.',
+    techStack: ['WordPress', 'PHP', 'JavaScript'],
+    image: '/images/projects/sarahbrownemdr.png',
+    link: 'https://sarahbrownemdr.com',
   },
 ];
 ---
@@ -41,6 +50,7 @@ const projects = [
           techStack={project.techStack}
           image={project.image}
           link={project.link}
+          status={project.status}
         />
       ))
     }

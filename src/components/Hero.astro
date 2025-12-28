@@ -1,5 +1,6 @@
 ---
 import styles from './Hero.module.scss';
+import { Icon } from 'astro-icon/components';
 ---
 
 <aside class={styles.sidebar}>
@@ -44,7 +45,7 @@ import styles from './Hero.module.scss';
         class={styles.socialLink}
         aria-label="GitHub"
       >
-        GitHub
+        <Icon name="simple-icons:github" />
       </a>
       <a
         href="https://linkedin.com/in/joeleeson"
@@ -53,10 +54,7 @@ import styles from './Hero.module.scss';
         class={styles.socialLink}
         aria-label="LinkedIn"
       >
-        LinkedIn
-      </a>
-      <a href="mailto:contact@joeleeson.com" class={styles.socialLink}>
-        Email
+        <Icon name="simple-icons:linkedin" />
       </a>
     </div>
   </div>

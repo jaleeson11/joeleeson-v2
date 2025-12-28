@@ -1,12 +1,10 @@
 @import 'modern-normalize/modern-normalize.css';
-@import '@fontsource/dm-sans/400.css';
-@import '@fontsource/dm-sans/500.css';
-@import '@fontsource/dm-sans/600.css';
-@import '@fontsource/dm-sans/700.css';
-@import '@fontsource/dm-sans/800.css';
-@import '@fontsource/dm-sans/900.css';
 @import '@fontsource/space-mono/400.css';
 @import '@fontsource/space-mono/700.css';
+@import '@fontsource/ibm-plex-sans/400.css';
+@import '@fontsource/ibm-plex-sans/500.css';
+@import '@fontsource/ibm-plex-sans/600.css';
+@import '@fontsource/ibm-plex-sans/700.css';
 @import './variables.scss';
 
 /* Box sizing reset */
@@ -69,14 +67,13 @@ h4,
 h5,
 h6 {
   font-family: var(--font-family-heading);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
   line-height: var(--line-height-tight);
   color: var(--color-text);
 }
 
 h1 {
   font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-extrabold);
 }
 
 h2 {
@@ -154,7 +151,7 @@ section {
   padding: var(--spacing-3xl) 0;
 }
 
-@media (max-width: 768px) {
+@include tablet {
   section {
     padding: var(--spacing-2xl) 0;
   }
@@ -168,7 +165,7 @@ section {
   padding: 0 var(--spacing-lg);
 }
 
-@media (max-width: 768px) {
+@include tablet {
   .container {
     padding: 0 var(--spacing-md);
   }
