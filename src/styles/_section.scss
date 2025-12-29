@@ -1,0 +1,20 @@
+@use './breakpoints' as *;
+
+.section {
+  padding: var(--spacing-3xl) 0;
+
+  @include tablet {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  &:first-of-type {
+    @include tablet {
+      padding-top: var(--spacing-md);
+    }
+  }
+}
+
+.section-heading {
+  margin-top: 0;
+  margin-bottom: var(--spacing-xl);
+}

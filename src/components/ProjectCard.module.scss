@@ -1,4 +1,4 @@
-@import '../styles/breakpoints';
+@use '../styles/breakpoints' as *;
 
 .card {
   position: relative;
@@ -125,7 +125,7 @@
 }
 
 .tech {
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   padding: calc(var(--spacing-xs) * 0.75) var(--spacing-md);
   background-color: rgba(96, 165, 250, 0.15);
   color: var(--color-accent);

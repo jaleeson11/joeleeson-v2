@@ -1,18 +1,10 @@
-@import '../styles/breakpoints';
-
-.skills {
-  padding: var(--spacing-3xl) 0;
-}
-
-.heading {
-  margin-top: 0;
-  margin-bottom: var(--spacing-xl);
-}
+@use '../styles/breakpoints' as *;
 
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: var(--spacing-2xl);
+  margin-top: var(--spacing-2xl);
 }
 
 .skill {
@@ -27,11 +19,19 @@
   width: 40px;
   height: 40px;
   color: var(--color-text);
-  transition: color var(--transition-base);
+  transition:
+    color var(--transition-base),
+    filter var(--transition-base);
 }
 
 .skill:hover .icon {
   color: var(--color-accent);
+  filter: drop-shadow(
+      0 0 12px color-mix(in srgb, var(--color-primary) 40%, transparent)
+    )
+    drop-shadow(
+      0 0 24px color-mix(in srgb, var(--color-accent) 20%, transparent)
+    );
 }
 
 .name {
@@ -51,9 +51,5 @@
   .grid {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-xl);
-  }
-
-  .skills {
-    padding: var(--spacing-2xl) 0;
   }
 }

@@ -1,11 +1,4 @@
-.about {
-  padding: var(--spacing-3xl) 0;
-}
-
-.heading {
-  margin-top: 0;
-  margin-bottom: var(--spacing-xl);
-}
+@use '../styles/breakpoints' as *;
 
 .content {
   max-width: 65ch;
@@ -19,15 +12,5 @@
 
   p:last-child {
     margin-bottom: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .about {
-    padding: var(--spacing-2xl) 0;
-  }
-
-  .content p {
-    font-size: var(--font-size-sm);
   }
 }

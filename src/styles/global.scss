@@ -1,3 +1,5 @@
+@use './breakpoints' as *;
+@use './section';
 @import 'modern-normalize/modern-normalize.css';
 @import '@fontsource/space-mono/400.css';
 @import '@fontsource/space-mono/700.css';
@@ -146,17 +148,6 @@ h3:first-child {
   margin-top: 0;
 }
 
-/* Section spacing */
-section {
-  padding: var(--spacing-3xl) 0;
-}
-
-@include tablet {
-  section {
-    padding: var(--spacing-2xl) 0;
-  }
-}
-
 /* Container for content width */
 .container {
   width: 100%;
@@ -169,16 +160,6 @@ section {
   .container {
     padding: 0 var(--spacing-md);
   }
-}
-
-/* Section overline text */
-.section-overline {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-xs);
 }
 
 /* Spacing utility classes */
@@ -202,4 +183,18 @@ section {
 }
 .spacing-3xl {
   margin-bottom: var(--spacing-3xl);
+}
+
+/* Section overline text */
+.section-overline {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: color-mix(in srgb, var(--color-primary) 70%, transparent);
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid
+    color-mix(in srgb, var(--color-primary) 70%, transparent);
+  display: inline-block;
 }

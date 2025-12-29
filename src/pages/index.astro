@@ -4,12 +4,12 @@ import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import Skills from '../components/Skills.astro';
 import Projects from '../components/Projects.astro';
-import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout
-  title="Joe Leeson - Web Developer"
-  description="Web developer based near London, UK. Building modern, performant web applications with a focus on clean code and exceptional user experiences."
+  title="Joe Leeson - Software Developer"
+  description="Software developer based near London, UK. Building modern, performant web applications with a focus on clean code and exceptional user experiences."
 >
   <div class="page-wrapper">
     <Hero />
@@ -17,7 +17,7 @@ import Contact from '../components/Contact.astro';
       <About />
       <Skills />
       <Projects />
-      <Contact />
+      <Footer />
     </main>
   </div>
 </Layout>
@@ -36,7 +36,7 @@ import Contact from '../components/Contact.astro';
 </script>
 
 <style lang="scss">
-  @import '../styles/breakpoints';
+  @use '../styles/breakpoints' as *;
 
   .page-wrapper {
     position: relative;
@@ -84,6 +84,7 @@ import Contact from '../components/Contact.astro';
   @include laptop {
     .page-wrapper {
       flex-direction: column;
+      gap: 0;
     }
   }
 

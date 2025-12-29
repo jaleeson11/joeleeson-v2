@@ -1,4 +1,4 @@
-@import '../styles/breakpoints';
+@use '../styles/breakpoints' as *;
 
 .sidebar {
   width: 50%;
@@ -58,8 +58,7 @@
 
 .title {
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-secondary);
+  color: var(--color-primary);
   margin-bottom: var(--spacing-lg);
   opacity: 0;
   transform: translateY(10px);
@@ -172,7 +171,9 @@
 .socialLink {
   color: var(--color-text-secondary);
   text-decoration: none;
-  transition: color var(--transition-base);
+  transition:
+    color var(--transition-base),
+    filter var(--transition-base);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,6 +186,12 @@
 
 .socialLink:hover {
   color: var(--color-accent);
+  filter: drop-shadow(
+      0 0 12px color-mix(in srgb, var(--color-primary) 40%, transparent)
+    )
+    drop-shadow(
+      0 0 24px color-mix(in srgb, var(--color-accent) 20%, transparent)
+    );
 }
 
 @include laptop {
@@ -193,10 +200,11 @@
     max-width: none;
     height: auto;
     position: relative;
+    padding: var(--spacing-2xl) 0;
   }
 
   .sidebarContent {
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
   }
 
   .nav {
@@ -210,13 +218,5 @@
 
   .navLink::before {
     display: none;
-  }
-
-  .name {
-    font-size: var(--font-size-3xl);
-  }
-
-  .title {
-    font-size: var(--font-size-lg);
   }
 }

@@ -1,125 +1,54 @@
-# Joe Leeson - Portfolio Website
+# Joe Leeson
 
-A modern, performance-focused portfolio website built with Astro, showcasing web development projects with a clean, minimal aesthetic.
+A minimal, performance-focused developer portfolio built with Astro and Sass.
 
-## Project Overview
-
-This is a complete redesign of joeleeson.com, featuring:
-
-- **Modern design** inspired by brittanychiang.com and hirok.io
-- **Performance-first** approach targeting Lighthouse scores of 95+
-- **Fully static** site generation for optimal speed
-- **Responsive design** that works beautifully on all devices
-- **Accessible** following WCAG AA standards
+**Live site:** [joeleeson.com](https://joeleeson.com)
 
 ## Tech Stack
 
-- **Framework**: [Astro](https://astro.build) v5.16.1
-- **Styling**: SCSS with CSS Modules
-- **TypeScript**: Strict mode enabled
-- **Code Quality**: Prettier for consistent formatting
+- **Framework:** [Astro](https://astro.build)
+- **Styling:** Sass with CSS Modules
+- **Icons:** [Astro Icon](https://github.com/natemoo-re/astro-icon) with Lucide and Simple Icons
+- **Fonts:** IBM Plex Sans via Fontsource
+- **Deployment:** Vercel
 
 ## Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- npm or pnpm
-
-### Installation
 
 ```bash
 # Clone the repository
 git clone https://github.com/jaleeson11/joeleeson.git
-
-# Navigate to project directory
 cd joeleeson
 
 # Install dependencies
 npm install
-```
 
-### Development
-
-```bash
 # Start development server
 npm run dev
 ```
 
-The site will be available at `http://localhost:4321`
+The site runs at `http://localhost:4321`
 
-### Building for Production
+## Scripts
 
-```bash
-# Create production build
-npm run build
+| Command           | Description               |
+| ----------------- | ------------------------- |
+| `npm run dev`     | Start development server  |
+| `npm run build`   | Build for production      |
+| `npm run preview` | Preview production build  |
+| `npm run format`  | Format code with Prettier |
 
-# Preview production build locally
-npm run preview
-```
+## Styling Architecture
 
-### Code Formatting
+The project uses a combination of CSS custom properties and Sass:
 
-```bash
-# Format all files
-npm run format
-
-# Check formatting without making changes
-npm run format:check
-```
-
-## Project Structure
-
-```text
-/
-├── public/
-│   ├── favicon.svg
-│   └── images/
-│       └── projects/          # Project screenshots
-├── src/
-│   ├── components/            # Astro components
-│   ├── data/                  # Static content data
-│   ├── layouts/               # Layout components
-│   ├── pages/                 # Pages (routes)
-│   │   └── index.astro        # Homepage
-│   └── styles/                # Global SCSS files
-├── tasks/                     # Project planning docs
-├── astro.config.mjs           # Astro configuration
-├── package.json               # Dependencies and scripts
-└── tsconfig.json              # TypeScript configuration
-```
-
-## Design System
-
-- **Typography**: System fonts with fallbacks for optimal performance
-- **Spacing**: Consistent 8px scale (4, 8, 16, 24, 32, 48, 64)
-- **Colors**: Monochromatic palette with strategic accent color
-- **Animations**: Subtle transitions (200-300ms) with reduced-motion support
-
-## Development Workflow
-
-This project follows a structured task-based workflow:
-
-1. **PRD**: Product Requirements Document in `tasks/0001-prd-portfolio-redesign.md`
-2. **Task List**: Detailed breakdown in `tasks/tasks-0001-prd-portfolio-redesign.md`
-3. **Commits**: Conventional commit format (`feat:`, `fix:`, `chore:`, etc.)
-
-## Deployment
-
-The site is configured for static deployment to platforms like:
-
-- [Vercel](https://vercel.com)
-- [Netlify](https://netlify.com)
-- Any static hosting service
-
-Site URL: `https://joeleeson.com`
+- **CSS custom properties** for runtime theming (colours, spacing, typography)
+- **Sass partials** for reusable mixins and shared styles
+- **CSS Modules** for component-scoped styles
 
 ## License
 
-© 2025 Joe Leeson. All rights reserved.
+MIT - feel free to use this as a starting point for your own portfolio.
 
-## Contact
+## Author
 
-- **GitHub**: [@jaleeson11](https://github.com/jaleeson11)
-- **LinkedIn**: [Joe Leeson](https://linkedin.com/in/joeleeson)
-- **Email**: contact@joeleeson.com
+**Joe Leeson** - [GitHub](https://github.com/jaleeson11) · [LinkedIn](https://linkedin.com/in/joeleeson)

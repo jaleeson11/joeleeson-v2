@@ -3,22 +3,22 @@ import styles from './Skills.module.scss';
 import { Icon } from 'astro-icon/components';
 
 const skills = [
-  { name: 'HTML', icon: 'simple-icons:html5' },
-  { name: 'CSS', icon: 'simple-icons:css3' },
-  { name: 'JavaScript', icon: 'simple-icons:javascript' },
+  { name: 'TypeScript', icon: 'simple-icons:typescript' },
+  { name: 'React', icon: 'simple-icons:react' },
+  { name: 'Next.js', icon: 'simple-icons:nextdotjs' },
   { name: 'PHP', icon: 'simple-icons:php' },
-  { name: 'jQuery', icon: 'simple-icons:jquery' },
-  { name: 'SASS', icon: 'simple-icons:sass' },
-  { name: 'Vue.js', icon: 'simple-icons:vuedotjs' },
-  { name: 'Magento', icon: 'simple-icons:magento' },
-  { name: 'WordPress', icon: 'simple-icons:wordpress' },
   { name: 'Laravel', icon: 'simple-icons:laravel' },
+  { name: 'Ghostty', icon: 'simple-icons:gnometerminal' },
+  { name: 'Git', icon: 'simple-icons:git' },
+  { name: 'PostgreSQL', icon: 'simple-icons:postgresql' },
+  { name: 'AWS', icon: 'simple-icons:amazonwebservices' },
+  { name: 'VS Code', icon: 'simple-icons:visualstudiocode' },
 ];
 ---
 
-<section class={styles.skills} id="skills">
-  <p class="section-overline">Here are some of my</p>
-  <h2 class={styles.heading}>Skills</h2>
+<section class="section" id="skills">
+  <p class="section-overline">Some of my favourite</p>
+  <h2 class="section-heading">Tools</h2>
   <div class={styles.grid}>
     {
       skills.map((skill) => (
