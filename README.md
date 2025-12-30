@@ -15,8 +15,7 @@ A minimal, performance-focused developer portfolio built with [Astro](https://as
 
 ### Prerequisites
 
-- Node.js 18+ and npm installed
-- Git
+- Node.js 18+
 
 ### Installation
 
