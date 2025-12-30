@@ -1,0 +1,13 @@
+@use '../styles/breakpoints' as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+
+@include tablet {
+  .grid {
+    gap: var(--spacing-lg);
+  }
+}

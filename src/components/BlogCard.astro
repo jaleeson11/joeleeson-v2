@@ -1,0 +1,40 @@
+---
+import styles from './BlogCard.module.scss';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  slug: string;
+  tags?: string[];
+}
+
+const { title, description, pubDate, slug, tags } = Astro.props;
+
+const formattedDate = pubDate.toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<article class={styles.card}>
+  <a href={`/blog/${slug}`} class={styles.link}>
+    <div class={styles.content}>
+      <time class={styles.date} datetime={pubDate.toISOString()}>
+        {formattedDate}
+      </time>
+      <h3 class={styles.title}>{title}</h3>
+      <p class={styles.description}>{description}</p>
+      {
+        tags && tags.length > 0 && (
+          <ul class={styles.tags}>
+            {tags.map((tag) => (
+              <li class={styles.tag}>{tag}</li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+  </a>
+</article>

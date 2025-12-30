@@ -1,0 +1,59 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Footer from '../../components/Footer.astro';
+import styles from '../../components/BlogPost.module.scss';
+import { Icon } from 'astro-icon/components';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+
+const post = Astro.props;
+const { Content } = await post.render();
+
+const formattedDate = post.data.pubDate.toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<Layout
+  title={`${post.data.title} | Joe Leeson`}
+  description={post.data.description}
+>
+  <div class={styles.wrapper}>
+    <main class={styles.main}>
+      <a href="/#blog" class={styles.backLink}>
+        <Icon name="lucide:arrow-left" />
+        Back to home
+      </a>
+      <article class={styles.article}>
+        <header class={styles.header}>
+          <time class={styles.date} datetime={post.data.pubDate.toISOString()}>
+            {formattedDate}
+          </time>
+          <h1 class={styles.title}>{post.data.title}</h1>
+          {
+            post.data.tags && post.data.tags.length > 0 && (
+              <ul class={styles.tags}>
+                {post.data.tags.map((tag: string) => (
+                  <li class={styles.tag}>{tag}</li>
+                ))}
+              </ul>
+            )
+          }
+        </header>
+        <div class={styles.content}>
+          <Content />
+        </div>
+      </article>
+      <Footer />
+    </main>
+  </div>
+</Layout>

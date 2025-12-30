@@ -15,4 +15,10 @@ export default defineConfig({
   },
   compressHTML: true,
   integrations: [icon()],
+  markdown: {
+    shikiConfig: {
+      theme: 'github-dark',
+      wrap: true,
+    },
+  },
 });
