@@ -4,37 +4,51 @@ A minimal, performance-focused developer portfolio built with [Astro](https://as
 
 **Live site:** [joeleeson.com](https://joeleeson.com)
 
-## Installation
+![Screenshot](screenshot.png)
 
-**Prerequisites:** Node.js 18+
+## Tech Stack
 
+- [Astro](https://astro.build)
+- Sass with CSS Modules
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ and npm installed
+- Git
+
+### Installation
+
+1. Clone the repository
 ```bash
-# Clone the repository
-git clone https://github.com/jaleeson11/joeleeson.git
-cd joeleeson
+git clone https://github.com/jaleeson11/joeleeson-v2.git
+```
 
-# Install dependencies
+2. Navigate to the project directory
+```bash
+cd joeleeson-v2
+```
+
+3. Install dependencies
+```bash
 npm install
+```
 
-# Start development server
+4. Run the development server
+```bash
 npm run dev
 ```
 
-The site runs at `http://localhost:4321`
+5. Open [http://localhost:4321](http://localhost:4321) in your browser
 
-## Usage
+### Build for Production
 
-| Command           | Description              |
-| ----------------- | ------------------------ |
-| `npm run dev`     | Start development server |
-| `npm run build`   | Build for production     |
-| `npm run preview` | Preview production build |
-| `npm run format`  | Format code with Prettier |
+```bash
+npm run build
+npm run preview
+```
 
 ## License
 
 MIT
-
-## Author
-
-**Joe Leeson** - [GitHub](https://github.com/jaleeson11) · [LinkedIn](https://linkedin.com/in/joeleeson)
