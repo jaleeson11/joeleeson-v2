@@ -1,7 +1,7 @@
 ---
 title: 'AI-Powered Coding: Building Without the Blueprint'
 description: 'Why agentic coding tools can lead to technically sound but architecturally unfit code, and how to use AI more intentionally.'
-pubDate: 2025-01-02
+pubDate: 2025-12-30
 tags: ['AI', 'architecture', 'software-engineering']
 ---
 
