@@ -12,26 +12,6 @@
   flex-direction: column;
 }
 
-.backLink {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  color: var(--color-text-secondary);
-  text-decoration: none;
-  font-size: var(--font-size-sm);
-  margin-bottom: var(--spacing-2xl);
-  transition: color var(--transition-base);
-
-  svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  &:hover {
-    color: var(--color-primary);
-  }
-}
-
 .article {
   flex: 1;
 }

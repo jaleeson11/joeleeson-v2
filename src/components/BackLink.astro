@@ -1,0 +1,15 @@
+---
+import styles from './BackLink.module.scss';
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  href: string;
+  label?: string;
+}
+
+const { href, label = 'Go back' } = Astro.props;
+---
+
+<a href={href} class={styles.backLink} aria-label={label}>
+  <Icon name="lucide:arrow-left" />
+</a>

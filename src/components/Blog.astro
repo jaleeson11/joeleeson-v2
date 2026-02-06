@@ -2,10 +2,16 @@
 import { getCollection } from 'astro:content';
 import styles from './Blog.module.scss';
 import BlogCard from './BlogCard.astro';
+import Button from './Button.astro';
 
-const posts = (await getCollection('blog')).sort(
+const INITIAL_VISIBLE = 2;
+
+const allPosts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const posts = allPosts.slice(0, INITIAL_VISIBLE);
+const hasMore = allPosts.length > INITIAL_VISIBLE;
 ---
 
 <section class="section" id="blog">
@@ -24,4 +30,11 @@ const posts = (await getCollection('blog')).sort(
       ))
     }
   </div>
+  {hasMore && (
+    <div class={styles.viewAllWrapper}>
+      <a href="/blog" class={styles.viewAllLink}>
+        <Button>View all posts</Button>
+      </a>
+    </div>
+  )}
 </section>

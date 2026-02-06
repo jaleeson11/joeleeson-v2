@@ -2,8 +2,8 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
+import BackLink from '../../components/BackLink.astro';
 import styles from '../../components/BlogPost.module.scss';
-import { Icon } from 'astro-icon/components';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -29,10 +29,7 @@ const formattedDate = post.data.pubDate.toLocaleDateString('en-GB', {
 >
   <div class={styles.wrapper}>
     <main class={styles.main}>
-      <a href="/#blog" class={styles.backLink}>
-        <Icon name="lucide:arrow-left" />
-        Back to home
-      </a>
+      <BackLink href="/blog" label="Back to blog" />
       <article class={styles.article}>
         <header class={styles.header}>
           <time class={styles.date} datetime={post.data.pubDate.toISOString()}>

@@ -1,0 +1,26 @@
+@use '../styles/mixins' as *;
+
+.backLink {
+  @include gradient-border-hover(50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-text-secondary);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: color var(--transition-base), background-color var(--transition-base), box-shadow var(--transition-base);
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    color: var(--color-text);
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+}
