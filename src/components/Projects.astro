@@ -1,9 +1,19 @@
 ---
 import styles from './Projects.module.scss';
 import ProjectCard from './ProjectCard.astro';
+import Button from './Button.astro';
+
+const INITIAL_VISIBLE = 3;
 
 // Placeholder data - will be replaced with actual data from src/data/projects.ts
 const projects = [
+  {
+    title: 'ESLint Plugin Test Complexity',
+    description:
+      'ESLint plugin that enforces test coverage based on cyclomatic complexity.',
+    techStack: ['TypeScript', 'ESLint', 'Node.js'],
+    link: 'https://github.com/jaleeson11/eslint-plugin-test-complexity',
+  },
   {
     title: 'Theme Builder',
     description:
@@ -36,23 +46,44 @@ const projects = [
     link: 'https://sarahbrownemdr.com',
   },
 ];
+
+const hasMore = projects.length > INITIAL_VISIBLE;
 ---
 
 <section class="section" id="projects">
   <p class="section-overline">Explore my recent</p>
   <h2 class="section-heading">Projects</h2>
-  <div class={styles.grid}>
+  <div class={styles.grid} id="projects-grid">
     {
-      projects.map((project) => (
-        <ProjectCard
-          title={project.title}
-          description={project.description}
-          techStack={project.techStack}
-          image={project.image}
-          link={project.link}
-          status={project.status}
-        />
+      projects.map((project, index) => (
+        <div data-hidden={index >= INITIAL_VISIBLE ? 'true' : undefined}>
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            techStack={project.techStack}
+            image={project.image}
+            link={project.link}
+            status={project.status}
+          />
+        </div>
       ))
     }
   </div>
+  {hasMore && (
+    <div class={styles.showMoreWrapper}>
+      <Button id="show-more-projects">Show more</Button>
+    </div>
+  )}
 </section>
+
+<script>
+  const btn = document.getElementById('show-more-projects');
+  const grid = document.getElementById('projects-grid');
+
+  btn?.addEventListener('click', () => {
+    grid?.querySelectorAll('[data-hidden]').forEach(el => {
+      el.removeAttribute('data-hidden');
+    });
+    btn.style.display = 'none';
+  });
+</script>

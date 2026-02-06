@@ -1,45 +1,18 @@
 @use '../styles/breakpoints' as *;
+@use '../styles/mixins' as *;
 
 .card {
-  position: relative;
+  @include gradient-border-hover;
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   transition:
     background-color var(--transition-base),
     box-shadow var(--transition-base);
   background-color: rgba(255, 255, 255, 0.05);
-}
 
-.card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: var(--border-radius-lg);
-  padding: 1px;
-  background: linear-gradient(
-    135deg,
-    rgba(49, 234, 153, 0.3),
-    rgba(96, 165, 250, 0.3)
-  );
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity var(--transition-base);
-  pointer-events: none;
-}
-
-.card:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-  box-shadow:
-    0 0 20px rgba(49, 234, 153, 0.1),
-    0 0 40px rgba(96, 165, 250, 0.05);
-}
-
-.card:hover::before {
-  opacity: 1;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
 }
 
 .link {
@@ -61,7 +34,7 @@
 
 .date {
   font-size: var(--font-size-sm);
-  color: var(--color-primary);
+  color: var(--color-text-secondary);
 }
 
 .title {

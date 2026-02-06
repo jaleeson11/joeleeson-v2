@@ -15,13 +15,17 @@ const { title, description, techStack, image, link, status } = Astro.props;
 ---
 
 <article class={styles.card}>
-  {
-    image && (
-      <div class={styles.imageWrapper}>
+  <div class={styles.imageWrapper}>
+    {
+      image ? (
         <img src={image} alt={title} class={styles.image} />
-      </div>
-    )
-  }
+      ) : (
+        <div class={styles.placeholder}>
+          <Icon name="lucide:code" />
+        </div>
+      )
+    }
+  </div>
   <div class={styles.content}>
     <div class={styles.titleRow}>
       <h3 class={styles.title}>{title}</h3>

@@ -1,0 +1,14 @@
+---
+import styles from './Button.module.scss';
+
+interface Props {
+  id?: string;
+  type?: 'button' | 'submit' | 'reset';
+}
+
+const { id, type = 'button' } = Astro.props;
+---
+
+<button class={styles.button} id={id} type={type}>
+  <slot />
+</button>
