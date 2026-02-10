@@ -30,11 +30,13 @@ const hasMore = allPosts.length > INITIAL_VISIBLE;
       ))
     }
   </div>
-  {hasMore && (
-    <div class={styles.viewAllWrapper}>
-      <a href="/blog" class={styles.viewAllLink}>
-        <Button>View all posts</Button>
-      </a>
-    </div>
-  )}
+  {
+    hasMore && (
+      <div class={styles.viewAllWrapper}>
+        <a href="/blog" class={styles.viewAllLink}>
+          <Button>View all posts</Button>
+        </a>
+      </div>
+    )
+  }
 </section>

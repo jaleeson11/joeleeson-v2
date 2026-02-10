@@ -11,7 +11,8 @@ I recently set up a linting pipeline using git hooks for my team, and honestly, 
 
 ## The Problem We Were Trying to Solve
 
-Like most teams, we had a laundry list of things we *wanted* to maintain:
+Like most teams, we had a laundry list of things we _wanted_ to maintain:
+
 - Respect our layered architecture (no reaching across boundaries)
 - Keep test coverage above a reasonable threshold
 - Prevent type errors from slipping through
@@ -68,6 +69,7 @@ By catching unused code in the pre-push hook, we keep the codebase lean and make
 In the pre-commit hook, ESLint handles both formatting and catching unhelpful comments. We use a plugin that flags redundant documentation—comments that just restate what the code does.
 
 You've seen these:
+
 ```typescript
 // Increment the counter
 counter++;
@@ -76,7 +78,7 @@ counter++;
 const user = getUserById(id);
 ```
 
-These comments add zero value. They explain *what* the code does (which is already obvious) instead of *why* it does it. Our ESLint config catches these and encourages developers to either remove them or replace them with meaningful context about the business logic or design decisions.
+These comments add zero value. They explain _what_ the code does (which is already obvious) instead of _why_ it does it. Our ESLint config catches these and encourages developers to either remove them or replace them with meaningful context about the business logic or design decisions.
 
 ## Implementation: The Technical Bits
 
@@ -154,4 +156,4 @@ The biggest win, though, is psychological. Developers get immediate feedback ins
 
 ---
 
-*Have you implemented git hooks on your team? What checks do you run? I'd love to hear about your setup and what's worked (or hasn't worked) for you.*
+_Have you implemented git hooks on your team? What checks do you run? I'd love to hear about your setup and what's worked (or hasn't worked) for you._

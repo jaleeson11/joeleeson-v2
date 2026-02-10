@@ -12,7 +12,10 @@
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 50%;
   text-decoration: none;
-  transition: color var(--transition-base), background-color var(--transition-base), box-shadow var(--transition-base);
+  transition:
+    color var(--transition-base),
+    background-color var(--transition-base),
+    box-shadow var(--transition-base);
 
   svg {
     width: 18px;

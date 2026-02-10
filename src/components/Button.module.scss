@@ -10,7 +10,9 @@
   background-color: rgba(255, 255, 255, 0.05);
   border: none;
   border-radius: var(--border-radius-lg);
-  transition: background-color var(--transition-base), box-shadow var(--transition-base);
+  transition:
+    background-color var(--transition-base),
+    box-shadow var(--transition-base);
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.08);

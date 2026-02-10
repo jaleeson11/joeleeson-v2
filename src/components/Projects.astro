@@ -69,11 +69,13 @@ const hasMore = projects.length > INITIAL_VISIBLE;
       ))
     }
   </div>
-  {hasMore && (
-    <div class={styles.showMoreWrapper}>
-      <Button id="show-more-projects">Show more</Button>
-    </div>
-  )}
+  {
+    hasMore && (
+      <div class={styles.showMoreWrapper}>
+        <Button id="show-more-projects">Show more</Button>
+      </div>
+    )
+  }
 </section>
 
 <script>
@@ -81,7 +83,7 @@ const hasMore = projects.length > INITIAL_VISIBLE;
   const grid = document.getElementById('projects-grid');
 
   btn?.addEventListener('click', () => {
-    grid?.querySelectorAll('[data-hidden]').forEach(el => {
+    grid?.querySelectorAll('[data-hidden]').forEach((el) => {
       el.removeAttribute('data-hidden');
     });
     btn.style.display = 'none';

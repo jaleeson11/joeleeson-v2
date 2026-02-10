@@ -11,7 +11,10 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 
-<Layout title="Blog | Joe Leeson" description="Articles about software engineering, web development, and technology.">
+<Layout
+  title="Blog | Joe Leeson"
+  description="Articles about software engineering, web development, and technology."
+>
   <div class={styles.wrapper}>
     <main class={styles.main}>
       <BackLink href="/" label="Back to home" />
